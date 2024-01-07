@@ -25,7 +25,8 @@ Trigger Sensor, send a short pulse to the trigger Pin (about 10 microseconds), t
 The sound waves will travels through the air, then after hit an object, the waves will be reflected.
 The reflected waves will be received by Echo Sensor.
 
-We can calculate duration using method buildIn pulseIn
+We can calculate duration using method buildIn pulseIn.
+
 With the duration of ultrasonic waves traveled, we can count the distance with it.
 
 ```C++
@@ -34,14 +35,15 @@ With the duration of ultrasonic waves traveled, we can count the distance with i
 ```
 
 What is 0.034? Where is it Come from?
+
 As we all know, the speed of the sound is 340 m/s, then we need to change it as cm/microseconds
 ```C++
    340 * 100 / 1 * 1000000
 ```
-Then, Because the duration that we get, is the duration of wave traveling from Trigger Sensor -> Object -> Back to Echo Sensor.
+Then, Because the duration that we get is the duration of wave traveling from Trigger Sensor -> Object -> Back to Echo Sensor.
 So it is a round-trip, to calculate only from Sensor to Object we can divided it by 2.
 
-Then we get a distance in centimeters.
+That's the distance in centimeters.
 
 ## Life Hacks
 Instead of having to pulse, and calculate, there's an awesome library we can use to calculate distance with HY-SRF05 Module called [New Ping](https://bitbucket.org/teckel12/arduino-new-ping/src/master/).
