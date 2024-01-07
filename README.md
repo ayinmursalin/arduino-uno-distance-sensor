@@ -30,7 +30,7 @@ With the duration of ultrasonic waves traveled, we can count the distance with i
 
 ```C++
   unsigned long duration = pulseIn(echoPin, HIGH);
-  int distance = duration * 0.034 / 2;
+  unsigned long distance = duration * 0.034 / 2;
 ```
 
 What is 0.034? Where is it Come from?
